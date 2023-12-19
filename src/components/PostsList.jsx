@@ -8,7 +8,7 @@ const PostsList = () => {
     return <>
         {!!posts.length && (
             <ul className={styles.posts}>
-            {posts.map(({ author, body, }, index) => <li key={index}><Post author={author} body={body}/></li>)}
+            {posts.map(({ author, body, id, }) => <Post key={id} id={id} author={author} body={body}/>)}
         </ul>
         )}
         {!posts.length && (
