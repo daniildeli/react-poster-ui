@@ -15,3 +15,8 @@ function Posts() {
 }
 
 export default Posts;
+
+export async function loader() {
+  const resData = await (await fetch('http://localhost:8080/posts')).json();
+  return resData.posts;
+}
